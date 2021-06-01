@@ -8,6 +8,8 @@ import {LoginForm} from "./Components/Login/Login";
 import {Marks} from "./Components/Marks/Marks";
 import {reducer, getGroupsRequest} from "./redux/saga";
 import {useSelector} from "react-redux";
+import {Teachers} from "./Components/Teachers/Teachers";
+import {TeacherMarks} from "./Components/Marks/TeacherMarks";
 
 function App() {
     const isAuthorized = useSelector(state => state.isAuthorized);
@@ -20,7 +22,8 @@ function App() {
               <Route path='/' component={HomePage} exact={true}/>
               <Route path='/login' component={LoginForm} exact={true}/>
               <Route path='/marks' component={Marks} exact={true}/>
-              <Route path='/admin' component={isAuthorized ? Marks : LoginForm} exact={true}/>
+              <Route path='/teacher-marks' component={TeacherMarks} exact={true}/>
+              <Route path='/admin' component={Teachers} exact={true}/>
               <Redirect to='/'/>
             </Switch>
           </Fragment>

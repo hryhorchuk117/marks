@@ -1,4 +1,4 @@
-import { Form, Input, Button, Checkbox, Table } from 'antd';
+import { Form, Input, Button, Checkbox, Table, Tag } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import { useHistory } from "react-router-dom";
 import './styles.scss';
@@ -42,6 +42,21 @@ export const Marks = () => {
       multiple: 4,
     },
   },
+      /*     {
+    title: 'Зміни',
+    key: 'tags',
+    dataIndex: 'tags',
+    render: () => (
+      <>
+            <Tag color={'geekblue'}>
+              Редагувати
+            </Tag>
+        <Tag color={'volcano'}>
+              Видалити
+            </Tag>
+      </>
+    ),
+  },*/
 ];
 
   const data = [
